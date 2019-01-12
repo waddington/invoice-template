@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Invoice</title>
+	<style>
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+		p {
+			line-height: 1.4em;
+		}
+		body {
+			font-size: 10px;
+		}
+		#invoice {
+			font-size: 1.4em;
+			max-width: 800px;
+			width: 100%;
+			margin: 0 auto;
+			padding: 30px 20px 40px;
+		}
+		.row {
+			display: block;
+			clear: both;
+			width: 100%;
+			margin-bottom: 100px;
+		}
+		.row:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+		.clear:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+		.fw-clear {
+			display: block;
+			clear: both;
+			width: 100%;
+		}
+		.fw-clear:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+
+		.company-information .title {
+			font-weight: bold;
+			font-size: 2em;
+			float: right;
+		}
+		.company-information .my-details {
+			float: left;
+			margin-bottom: 20px;
+		}
+		.company-information .my-details p:first-of-type {
+			font-weight: bold;
+		}
+		.company-information .my-details p:first-of-type span {
+			font-size: 1.2em;
+		}
+		.company-information .invoice-details {
+			float: right;
+		}
+		.company-information .invoice-details p {
+			text-align: right;
+			min-width: 240px;
+		}
+		.company-information .invoice-details p.due-date {
+			font-weight: bold;
+			font-size: 1.2em;
+		}
+		.company-information .invoice-details p span {
+			font-weight: bold;
+			float: left;
+		}
+		.company-information .their-details {
+			float: left;
+		}
+		.company-information .their-details p:first-of-type {
+			font-weight: bold;
+		}
+		.company-information .their-details p:first-of-type span {
+			font-size: 1.2em;
+		}
+
+		.work-information .additional {
+			margin-bottom: 20px;
+		}
+		.work-information .additional p:first-of-type {
+			font-weight: bold;
+		}
+		.work-information .work-table {
+			min-height: 320px;
+			display: block;
+			border: 1px solid black;
+			margin-bottom: 20px;
+		}
+		.work-information .work-table > div {
+			display: block;
+			clear: both;
+			width: 100%;
+		}
+		.work-information .work-table > div:after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+		.work-information .work-table > div:first-of-type {
+			font-weight: bold;
+			border-bottom: 1px solid black;
+		}
+		.work-information .work-table > div > p {
+			float: left;
+			padding: 4px 8px;
+		}
+		.work-information .work-table > div > p:nth-of-type(1) {
+			width: 56%;
+		}
+		.work-information .work-table > div > p:nth-of-type(2) {
+			width: 7%;
+		}
+		.work-information .work-table > div > p:nth-of-type(3) {
+			width: 10%;
+		}
+		.work-information .work-table > div > p:nth-of-type(4) {
+			width: 14%;
+		}
+		.work-information .work-table > div > p:nth-of-type(5) {
+			width: 10%;
+		}
+		.work-information .totals {
+			float: right
+		}
+		.work-information .totals p {
+			min-width: 160px;
+			text-align: right;
+			padding: 4px 8px;
+		}
+		.work-information .totals p span {
+			float: left;
+			font-weight: bold;
+		}
+		.work-information .totals p.gross {
+			border-top: 2px solid black;
+			font-weight: bold;
+			font-size: 1.2em;
+		}
+
+		.payment-details {
+			border-top: 1px solid;
+			padding-top: 10px;
+		}
+		.payment-details > div {
+			display: inline-block;
+			width: 33%;
+			vertical-align: text-top;
+		}
+		.payment-details > div:nth-of-type(1) {
+			width: 25%;
+		}
+		.payment-details > div:nth-of-type(2) {
+			width: 38%;
+		}
+		.payment-details > div:nth-of-type(3) {
+			width: 35%;
+		}
+		.payment-details > div > p:first-of-type {
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div id="invoice">
+		<div class="row company-information">
+			<div class="title">INVOICE</div>
+			<div class="my-details clear">
+				<p><span>From:</span><br/>My Name</p>
+				<p>Address line 1<br/>Village<br/>City, Post Code<br/>Phone: 07000 000 000</p>
+			</div>
+
+			<div class="fw-clear"></div>
+
+			<div class="invoice-details">
+				<p><span>Invoice Date: </span>10/01/2019</p>
+				<p><span>Invoice Number: </span>0001</p>
+				<p class="due-date"><span>DUE DATE: </span>09/02/2019</p>
+			</div>
+			<div class="their-details clear">
+				<p><span>To:</span><br/>Company Name</p>
+				<p>Address line 1<br/>City<br/>Post Code</p>
+			</div>
+		</div>
+		<div class="row work-information">
+			<div class="additional clear">
+				<p>Additional Information</p>
+				<p>Period: 02/12/2018 – 10/01/2019</p>
+			</div>
+
+			<div class="fw-clear"></div>
+
+			<div class="work-table">
+				<div class="headings">
+					<p>Description</p>
+					<p>Qty</p>
+					<p>Unit</p>
+					<p>Unit Price</p>
+					<p>Total</p>
+				</div>
+				<div class="line-item">
+					<p>Web site</p>
+					<p>8</p>
+					<p>hour(s)</p>
+					<p>£ 50.00</p>
+					<p>£ 400.00</p>
+				</div>
+			</div>
+
+			<div class="fw-clear"></div>
+
+			<div class="totals">
+				<p class="gross"><span>Total: </span>£ 400.00</p>
+			</div>
+		</div>
+		<div class="row payment-details">
+			<div class="my-address">
+				<p>Address</p>
+				<p>Address line 1<br/>Village<br/>City<br/>Post Code</p>
+			</div>
+			<div class="my-contact">
+				<p>Contact Information</p>
+				<p>My Name<br/>Phone: 07000 000 000<br/>Email: my.name@email.com</p>
+			</div>
+			<div class="my-payment">
+				<p>Payment Details</p>
+				<p>Sort Code: 00-00-00<br/>Account Number: 12345678</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

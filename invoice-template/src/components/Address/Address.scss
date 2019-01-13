@@ -1,0 +1,32 @@
+.address {
+	p {
+		&:first-of-type {
+			font-weight: bold;
+			span {
+				font-size: 1.2em;
+				display: block;
+				margin-bottom: -15px;
+			}
+		}
+		&:last-of-type {
+			span {
+				clear: left;
+				display: block;
+				margin-top: 6px;
+				&:last-of-type {
+					clear: none;
+				}
+				&:nth-last-of-type(2) {
+					clear: none;
+					float: left;
+					margin-right: 5px;
+					&:after {
+						content: ',';
+						display: block;
+						float: right;
+					}
+				}
+			}
+		}
+	}
+}

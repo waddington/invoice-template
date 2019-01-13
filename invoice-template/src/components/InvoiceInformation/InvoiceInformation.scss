@@ -1,0 +1,9 @@
+.information {
+	> p {
+		line-height: 1.4em;
+		&:last-of-type {
+			font-weight: bold;
+			font-size: 1.2em;
+		}
+	}
+}

@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import 'normalize.css';
 import './index.scss';
 
-const Index = () => {
-  return <div> Hello React! </div>;
-};
+import * as data from './invoice-details.json';
+import Invoice from "./containers/Invoice/Invoice";
 
-ReactDOM.render(<Index />, document.getElementById("index"));
+ReactDOM.render(<Invoice data={data}/>, document.getElementById("index"));

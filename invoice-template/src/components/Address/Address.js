@@ -7,11 +7,20 @@ export default class Address extends React.Component {
 			return <span>{item}</span>;
 		});
 
-		return (
-			<div className="address">
-				<p><span>{this.props.title}:</span><br/>{this.props.name}</p>
-				<p>{address}</p>
-			</div>
-		);
+		if (typeof this.props.title === 'undefined') {
+			return (
+				<div className="address">
+					<p>{this.props.name}</p>
+					<p>{address}</p>
+				</div>
+			);
+		} else {
+			return (
+				<div className="address">
+					<p><span>{this.props.title}:</span><br/>{this.props.name}</p>
+					<p>{address}</p>
+				</div>
+			);
+		}
 	}
 }

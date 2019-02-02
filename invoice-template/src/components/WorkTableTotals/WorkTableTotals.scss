@@ -1,0 +1,19 @@
+.totals {
+	float: right;
+	margin-top: 20px;
+	p {
+		min-width: 160px;
+		text-align: right;
+		padding: 4px 8px;
+
+		&.net {
+			border-top: 2px solid;
+			font-weight: bold;
+			font-size: 1.2em;
+		}
+
+		span {
+			float: left;
+		}
+	}
+}

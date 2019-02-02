@@ -1,0 +1,8 @@
+.contact-info {
+	p {
+		margin-bottom: 6px;
+		&:first-of-type {
+			font-weight: bold;
+		}
+	}
+}

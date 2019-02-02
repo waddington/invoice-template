@@ -6,8 +6,7 @@ import './HeaderDetails.scss';
 export default class HeaderDetails extends React.Component {
   render() {
     return (
-      <div id="header-details">
-        <div className="row">
+      <div id="header-details" className="row">
           <div className="title right">{this.props.data.title}</div>
           <div className="my-address left">
             <Address
@@ -17,7 +16,7 @@ export default class HeaderDetails extends React.Component {
             />
           </div>
 
-          <div className="clear full-width bottom-30" />
+          <div className="clear full-width bottom-20" />
 
           <div className="invoice-information right">
 		  	<InvoiceInformation information={this.props.data.invoiceInfo} />
@@ -30,7 +29,6 @@ export default class HeaderDetails extends React.Component {
             />
           </div>
         </div>
-      </div>
     );
   }
 }

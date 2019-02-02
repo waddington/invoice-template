@@ -1,0 +1,58 @@
+{
+	"title": "INVOICE",
+	"myDetails": {
+		"name": "My Name",
+		"address": ["Address Line 1", "Address Line 2", "City", "Postcode"],
+		"contact": [
+			"Phone: 07000 000 000",
+			"Email: my.name@email.com"
+		],
+		"payment": [
+			"Sort Code: 00-00-00",
+			"Account Number: 12345678"
+		]
+	},
+	"theirDetails": {
+		"name": "Company Name",
+		"address": ["Address Line 1", "Address Line 2", "City", "Postcode"]
+	},
+	"invoiceInfo": {
+		"date": "10/01/2019",
+		"due": "09/02/2019",
+		"number": "0001"
+	},
+	"additional": [
+		"Period: 02/12/2018 - 10/01/2019",
+		"Period: 02/12/2018 - 10/01/2019",
+		"Period: 02/12/2018 - 10/01/2019"
+	],
+	"billables": {
+		"unit": "£",
+		"items": [
+			{
+				"desc": "Web site",
+				"qty": "8",
+				"unit": "hour(s)",
+				"price": "50"
+			},
+			{
+				"desc": "Web site",
+				"qty": "8",
+				"unit": "hour(s)",
+				"price": "50"
+			},
+			{
+				"desc": "Web site",
+				"qty": "8",
+				"unit": "hour(s)",
+				"price": "50"
+			},
+			{
+				"desc": "Web site",
+				"qty": "8",
+				"unit": "hour(s)",
+				"price": "50"
+			}
+		]
+	}
+}

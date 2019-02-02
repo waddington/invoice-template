@@ -10,8 +10,8 @@ export default class Invoice extends React.Component {
     return (
       <div id="invoice" className="clear">
         <HeaderDetails data={this.props.data} />
-        <InvoiceDetails />
-        <FooterDetails />
+        <InvoiceDetails data={this.props.data} />
+        <FooterDetails data={this.props.data} />
       </div>
     );
   }
